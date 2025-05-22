@@ -22,7 +22,7 @@ $popins-600: 600 1.5rem "Poppins", sans-serif;
 }
 
 html {
-  font-size: 1rem;
+  font-size: clamp(16px, 1.7vw, 18px);
   color: $grey-400;
 }
 
@@ -68,7 +68,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 2rem;
   box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.1);
 
@@ -106,6 +106,15 @@ body {
 }
 
 @media (min-width: $desktop) {
+  .info {
+    margin: auto;
+    width: 40%;
+    &__title,
+    &__title--bold {
+      font-size: 2rem;
+    }
+  }
+
   .card {
     &__container {
       display: grid;
